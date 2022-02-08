@@ -1,4 +1,4 @@
-# Pod Test Repo
+# Pod Repo
 
 # To do before each breakout session:
 
@@ -7,7 +7,7 @@
 - To change to main use, `git checkout main`.
 - Then you can do `git pull`.
 
-When you pull, you will get all the new files and changes made by our pod. 
+When you pull, you will get all the new files and changes made by our pod.
 You will also be able to find the class challenges in the challenge folder.
 
 # Make a copy of the challenge file
@@ -26,7 +26,7 @@ From inside the folder where the challenge file is:
 **Please do not push on main!**
 
 Create your own branch. A good branch name should describe be description.
-for our purposes, using your name and the challenge name is sufficient. 
+for our purposes, using your name and the challenge name is sufficient.
 For example: `serena-temperature`
 
 - `git checkout -b [YOUR_BRANCH_NAME]` --> `git checkout -b serena-temperature`
@@ -38,7 +38,7 @@ For example: `serena-temperature`
 
 - Now go to your pod's repo on GitHub.com and find the button to create a pull request.
 - Make sure your base is **your pod's repo** (for example: `pod5_test_repo`) and **not** `Justice-Through_Code/pod_test_repo`
-- Give a short description of your code and any questions you might have 
+- Give a short description of your code and any questions you might have
 - Create Pull Request
 
 Your T.A will review your pull request, make any comments, and merge into the pod repo!
