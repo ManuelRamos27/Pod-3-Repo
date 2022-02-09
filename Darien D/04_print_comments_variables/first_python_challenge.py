@@ -19,7 +19,7 @@ google_age = int(current_year - birth_year)
 print (google_age)
 
 # 2.2: Print out a sentence about Google's age. Make sure to include your variable in the f-string!
-print (('Google is'),int(google_age),('and the year is 2022'))
+print (f"Google is {google_age} and the year is 2022")
 
 
 # 2.3 How many _months_ old is Google? Create a new variable google_age_months, and use multiplication to figure it out,
@@ -27,7 +27,7 @@ print (('Google is'),int(google_age),('and the year is 2022'))
 # (Assume 12 months for each year, you don't need to check which month they started)
 print('How many months old is Google?')
 months_old = (int(google_age*12))
-print (('Google is'),int(months_old),('months old.'))
+print (f"Google is {months_old} months old.")
 
 
 # print('3.1: The line of code below is commented out because it produces many SyntaxErrors.')
