@@ -30,33 +30,33 @@ print(ingredients.replace('milk','butter'))
 
 # When we use a string method in a print statement, does it change the string in our variable?
 # 2.3 Use a string method to count the number of times that 'milk' appears in our string.
-
+print(f"The amount of times Milk appears in the string is {ingredients.count('milk')}")
 
 # 2.4 Let's print out our `ingredients` variable again just to be sure.
-
+print(ingredients)
 
 # 'milk' is still in there! To save our changes to the string, we'll need to update the variable.
 # 2.5 Update our `ingredients` variable using the replace method, the same way we printed it out in step 2.2
 # print `ingredients` to make sure the change stuck this time.
-
-
+ingredients = ingredients.replace('milk','butter')
+print(ingredients)
 # 2.6 That looks better. Let's make it official: print the ingredients list all-caps now that it's right.
-
+print(f"{ingredients.upper()}")
 
 
 # 3 User Input/Type conversion
 # 3.1 Let's get some user input. Create a variable called `activity`, that saves the user's input to the question:
 # What is your favorite thing to do for fun?
-
+activity= input("What is your favorite thing to do for fun?\n ")
 
 # 3.2 Create a second variable called `frequency` that asks the user:
 # Roughly how many times a week do you make time to <activity>? <-- use your `activity` variable in an f-string here
-
+frequency= input(f"Roughly how many times a week do you make time to {activity}?\n ")
 
 # 3.3 When the user inputs a number, what data type is it saved as?
 # Print out the _type_ of the `frequency` variable to check.
-
+print(type(frequency))
 
 # 3.4 Uncomment the print statements below, and use `type conversion` to fix the second one, allowing it to run
-# print('Research shows that making time for enjoyment actually makes you more focused.')
-# print(f'We recommend you {activity} at least {frequency * 2} times a week!')
+print('Research shows that making time for enjoyment actually makes you more focused.')
+print(f'We recommend you {activity} at least {int(frequency) * 2} times a week!')
