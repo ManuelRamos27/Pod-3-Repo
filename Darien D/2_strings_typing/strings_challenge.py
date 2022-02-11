@@ -9,24 +9,24 @@ ingredient_4 = 'sugar'
 
 print('Four simple ingredients can combine to make so many different things:')
 # 1.1 Print the 4 ingredients in a single print statement, as 4 separate strings (separated by commas)
-
+print(ingredient_1,ingredient_2,ingredient_3,ingredient_4)
 
 # 1.2 Print the 4 ingredients using string concatenation
 # (make sure what you print out is legible-- add spaces and/or commas to your string so they don't all become one word!)
-
+print(ingredient_1 +" "+ ingredient_2 +" "+ ingredient_3 +" "+ ingredient_4)
 
 # 1.3 Print out the 4 ingredients using an f-string
 # (again make sure to add spaces and/or commas to make the printout make sense)
-
+print(f"{ingredient_1} {ingredient_2} {ingredient_3} {ingredient_4}")
 
 
 # 2. String Methods
 # 2.1 Save your f-string from step 1.3 as a variable called ingredients
-
+ingredients = (f"{ingredient_1} {ingredient_2} {ingredient_3} {ingredient_4}")
 
 # 2.2 Uh oh, one of these ingredients isn't quite right. Use one of our string methods to replace 'milk' with 'butter'
 # in a print statement
-
+print(ingredients.replace('milk','butter'))
 
 # When we use a string method in a print statement, does it change the string in our variable?
 # 2.3 Use a string method to count the number of times that 'milk' appears in our string.
