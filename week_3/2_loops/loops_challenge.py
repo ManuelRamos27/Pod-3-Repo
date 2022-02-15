@@ -73,6 +73,6 @@ days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 # tell the user to wear a sweater. Once the temperature is over 65, stop looping, and tell the user that
 # Spring has sprung!
 
+
 # NOTE: remember, if you accidentally create an infinite while loop, it's ok! Go into the command line and
-# a) on a mac: hit command + C to stop your program, or b) on a pc: hit control + C to stop the program.
-# No harm done to your computer (:
+# hit control + C to stop the program. No harm done to your computer (:
