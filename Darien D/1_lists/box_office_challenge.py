@@ -8,7 +8,9 @@ top_50_list = ['Star Wars: Episode I - The Phantom Menace', 'The Sixth Sense', '
 
 # TODO: Take the string "movies_str" and convert it into a list and assign it to a variable called "remaining_50_list"
 # Note: Print your new variable to see the list of movies
-print()
+remaining_50_list= []
+remaining_50_list = movies_str.split(",")
+print(remaining_50_list)
 
 # TODO: Hmm. Looks like "remaining_50_list" contains the movie "The Matrix" which is also in the "top_50_list". Let's remove this duplicate title from "remaining_50_list".
 # Note: Make sure to double check the list you are removing from!
@@ -25,7 +27,9 @@ print()
 
 # TODO: Great! Let's join the two lists into one list called "top_100". Uncomment the line of code below and run your code to see how it's done!
 # Note: Print your new variable to see the combined list of movies
-print()
+top_100 = top_50_list+remaining_50_list
+print(top_100)
+print(len(top_100))
 
 # TODO: Let's print the first movie in our "top_100" list. Let's use the index lookup method to do this.
 print()
