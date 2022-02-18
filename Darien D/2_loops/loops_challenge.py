@@ -5,6 +5,7 @@ days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 
 # Let's start simple, and build up from there.
 # 1.1: Write a for loop that prints out each day in the `days` variable above.
+
 for i in days:
     print(i)
 
@@ -12,6 +13,7 @@ for i in days:
 # 1.2: Now, instead of printing out the day, let's ask the user what their favorite thing
 # to do is on that day of the week. (Make sure to use an f-string so that the user knows which
 # day they're being asked about.)
+
 # for day in days:
 #     print(input(f"What is your favorite thing to do on {day} ?\n"))
 
@@ -24,9 +26,9 @@ fav_act = []
 # 1.4: Now, back in your for loop, append each of the user's answers into your new list.
 # Print out the list after your loop to check if it got populated correctly.
 
-for day in days:
-    fav_act.append(input(f"What is your favorite thing to do on {day} ?\n"))
-print(fav_act)
+# for day in days:
+#     fav_act.append(input(f"What is your favorite thing to do on {day} ?\n"))
+# print(fav_act)
 
 # 1.5: After your first loop, let's create a new one. As an example, let's say the user's favorite thing to
 # do on mondays is plan their week. This time, we want the output to be something like this:
@@ -36,8 +38,8 @@ print(fav_act)
 # Each time through this new loop, use the index number to index into each of your lists for the data
 # you need to print out.
 
-for i in range(len(days)):
-    print(f"My favorite thing to do on {days[i]} is {fav_act[i]} \n")
+# for i in range(len(days)): #for loop to go through the index of list called days using range function
+#     print(f"On {days[i]}  your favorite activity is to {fav_act[i]} \n") # use f string function to display string and loop through days and fav_act lists
 
 
 # Take a look back at the code you just wrote. Look at how much it does!
@@ -48,9 +50,14 @@ for i in range(len(days)):
 # Maybe: Write a program that asks the user about their favorite thing to do each day of the week.
 # Afterward, print out for the user each of their favorite daily activities.
 
+# FAV_ACTIVI= []
+# for i in days:
+#     FAV_ACTIVI.append(input(f"What is your favorite thing to do on {i} \n"))
+# print(FAV_ACTIVI)
+
 # Would this larger task have felt doable without breaking it down into steps?
 # Is it clear what needs to be done?
-
+git
 # Try to break down the steps required for this second loop challenge.
 
 # QUESTION 2: For loops with list, again
@@ -59,7 +66,6 @@ for i in range(len(days)):
 # is. If the temperature is below 50, tell the user to put on a jacket. Or, if the temperature is
 # between 50 and 65, tell the user to put on a sweater. Finally, if the temperature is above 65,
 # tell the user to put on some sunscreen.
-
 
 
 
