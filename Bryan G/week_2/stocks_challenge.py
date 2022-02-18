@@ -24,15 +24,15 @@ savings_amount = int(savings_amount)
 print("Challenge 3.2.2: Perform user-specific calculations")
 # TODO: You have all 3 user inputs stores in variables. Based on that, write conditional (if-elif-else) statements to find out the number of stocks of the company that can be purchased with the savings amount.
 if stock == 'amzn':
-    print(f'You can buy {int(savings_amount / amazon)} shares of Amazon.')
+    print(f'You can buy {savings_amount / amazon} shares of Amazon.')
 elif stock == 'aapl':
-    print(f"You can buy {int(savings_amount / apple)} shares of Apple.")
+    print(f"You can buy {savings_amount / apple} shares of Apple.")
 elif stock == 'fb':
-    print(f"You can buy {int(savings_amount / fb)} shares of Facebook.")    
+    print(f"You can buy {savings_amount / fb} shares of Facebook.")    
 elif stock == 'goog':
-    print(f"You can buy {int(savings_amount / google)} shares of Google.")
+    print(f"You can buy {savings_amount / google} shares of Google.")
 elif stock == 'msft':
-    print(f"You can buy {int(savings_amount / apple)} shares of Microsoft.") 
+    print(f"You can buy {savings_amount / apple} shares of Microsoft.") 
 else:
     print("Please enter one of the stocks listed above.") 
 
