@@ -57,9 +57,12 @@ fav_act = []
 
 # Would this larger task have felt doable without breaking it down into steps?
 # Is it clear what needs to be done?
-git
+#Definitely was more difficult to attemp to do when skippping over steps
 # Try to break down the steps required for this second loop challenge.
-
+# Create a list for days of the week and assign it to variable called days
+# Create a list called fav_act for favorite activities 
+# Create a for loop that loops through the days of the week 
+# In the loop print an f function that takes input of the favorite things to do on the days in the week
 # QUESTION 2: For loops with list, again
 
 # Write a program that loops through the days in the week. Each day, ask the user what the temperature
@@ -67,15 +70,25 @@ git
 # between 50 and 65, tell the user to put on a sweater. Finally, if the temperature is above 65,
 # tell the user to put on some sunscreen.
 
-
+# for day in days:
+#     temperature =  int(input(f"What was the temperature on {day} "))
+#     if temperature < 50:
+#         print("Put On A Jacket! ")
+#     elif (temperature >= 50) and (temperature <= 65):
+#         print("Put On A Sweater")
+#     elif temperature > 65:
+#         print("Put On Some Sunscreen")
+#     else:
+#         print("Invalid entry")
 
 
 # QUESTION 3: For loops with the range function
 
 # Write a program that asks the user how many times they would like to be wished happy birthday.
 # Then, print out happy birthday that number of times.
-
-
+HBD = int(input(f"How many times do you want to be wished Happy Birthday ?\n"))
+for i in range(HBD):
+    print(" Happy Birthday !")
 
 
 # QUESTION 4: While loops
@@ -83,6 +96,16 @@ git
 # Write a program that asks the user what temperature it is outside. While the temperature is below 65,
 # tell the user to wear a sweater. Once the temperature is over 65, stop looping, and tell the user that
 # Spring has sprung!
+temp = int(input("What is the Temperature today ? \n"))
+while temp < 65:
+    print("Wear a sweater")
+    temp =int(input("And the next day ?\n"))
+    if temp > 65:
+        print("Spring Has Sprung")
+        temp = 0
+        break
+if temp > 65:
+    print("Spring Has Sprung !")
 
 
 # NOTE: remember, if you accidentally create an infinite while loop, it's ok! Go into the command line and
