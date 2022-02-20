@@ -29,13 +29,16 @@ restaurant = {
     "distance": 1604.23,
     "transactions": ["pickup", "delivery"]
 }
-
-print(restaurant)
+#Printed the dictionary restaraunt
+# print(f"{restaurant}\n")
 
 # TODO: Write code to print the latitude and longitude of Four Barrel Coffee.
+print(f"Four Barrel Coffee\nLatitude:{restaurant['latitude']}\nLongitude:{restaurant['longitude']}\n")
 # TODO: Write code to print the complete address of the Four Barrel Coffee, formatted as a string - it should include the address, city, state and the zip code.
+Four_Barrel_Coffee_Address = f"Four Barrel Coffee Address:\n{restaurant['address1']},\n{restaurant['city']},{restaurant['state']}\n{restaurant['zip_code']}"
+print(Four_Barrel_Coffee_Address)
 # TODO: Write code to print the URL of the website of Four Barrel Coffee.
-
+print({restaurant['url']})
 
 print()
 
