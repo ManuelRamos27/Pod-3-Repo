@@ -50,7 +50,22 @@ print("Question 2")
 #         3. favourite_dish: your favourite thing to order at the restaurant (string)
 
 # TODO: Print each dictionary
-
+fav_nyc_rest1 = {
+    "name":'Veggie Castle',
+    "address":'132-09 Liberty Ave, South Richmond Hill, NY 11419',
+    "favourite_dish":'Mac & Cheese'
+}
+fav_nyc_rest2 = {
+    "name":'Jerrells BETR BRGR',
+    "address":'117 6th Ave, New York, NY 10013',
+    "favourite_dish":'O.G Betr Brgr',
+}
+fav_nyc_rest3 = {
+    "name":'Modern Love',
+    "address":'317 Union Avenue, Brooklyn, NY 11211',
+    "favourite_dish":'Bucatini a la Vodka'
+}
+print(f"{fav_nyc_rest1}\n{fav_nyc_rest2}\n{fav_nyc_rest3}")
 # The dictionary for each restaurant should look something like this
 
 '''
@@ -71,8 +86,8 @@ Remove the 'favourite_dish' key value pair from that restaurant's dictionary
 
 # TODO: Remove the 'favourite_dish' key-value pair from one of your 3 restaurants
 # TODO: Print the new dictionary. The new dictionary should only contain 'name' and 'address' for that restaurant
-
-print()
+fav_nyc_rest1.pop('favourite_dish')
+print(fav_nyc_rest1)
 
 print("Question 4")
 '''
@@ -83,8 +98,9 @@ Update just this value in that restaurant's dictionary
 # TODO: Update the address field of 1 restaurant
 # TODO: Print the new address of the restaurant by accessing that field of the restaurant's dictionary
 # TODO: Print the updated dictionary.
-
-print()
+fav_nyc_rest2["address"]='116th & Broadway, NY 10016'
+print(fav_nyc_rest2["address"])
+print(fav_nyc_rest2)
 
 
 print("Question 5")
@@ -94,3 +110,6 @@ Printing out all 3 of our restaurants every time is getting annoying. Let's clea
 
 # TODO: Put your 3 restaurant dictionaries into a list called `restaurants`
 # TODO: Loop through your list and print out the name and address of each restaurant
+restaurants = [fav_nyc_rest1,fav_nyc_rest2,fav_nyc_rest3]
+for i in restaurants:
+    print({i['name']},{i['address']})
