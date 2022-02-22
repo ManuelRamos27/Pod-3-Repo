@@ -40,9 +40,9 @@ print("Code Snippet 3:")
 
 a = 1
 b = 1
-c = (a >= b)
+c = (a == b)
 
-print(f"The value of c ({c}) is True since a ({a}) is greater than or equal to b ({b}).")
+print(f"The value of c ({c}) is True since a ({a}) is equal to b ({b}).")
 assert(c == True) #Do not change this line
 
 print()
@@ -53,9 +53,10 @@ print("Code Snippet 4:")
 
 d = (5 > 7) or not (8 < 20)
 # TO DO: Explain how d is set to False in a print statement
+print("d is set to false by making both conditions false")
 assert(d == False) #Do not change this line
 
-print(f"D is set to {d} because 5 is actually less than 7")
+print()
 
 
 print("Code Snippet 5:")
@@ -68,7 +69,7 @@ n = "goat"
 
 o = (m != n)
 
-print (f"The value of o ({o}) is True since Python is case-sensitive.")
+print (f"The value of o ({o}) is False since Python is case-sensitive.")
 assert(o == True) #Do not change this line
 
 print()
