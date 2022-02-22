@@ -11,32 +11,30 @@ top_50_list = ['Star Wars: Episode I - The Phantom Menace', 'The Sixth Sense', '
 
 # TODO: Take the string "movies_str" and convert it into a list and assign it to a variable called "remaining_50_list"
 # Note: Print your new variable to see the list of movies
-remaining_50_list= []
-remaining_50_list = movies_str.split(",")
-print(f"{remaining_50_list}\n\n")
 
-# TODO: Hmm. Looks like "remaining_50_list" contains the movie "The Matrix" which is also in the "top_50_list". Let's remove this duplicate title from "remaining_50_list".
-# Note: Make sure to double check the list you are removing from!
-remaining_50_list.remove("The Matrix")
-print(f"{remaining_50_list}\n\n")
 
 
 # TODO: We're down to 49 movies in "remaining_50_list". Let's add a movie to the list called "Anywhere But Here"
 # Note: Print the variable "remaining_50_list" and see if the movie has been added!
-remaining_50_list.append("Anywhere But Here")
-print(f"{remaining_50_list}\n\n")
+ Loops_Challenge
+remaining_50_list.append('Anywhere But Here')
+print(remaining_50_list)
+
 
 
 # TODO: Let's make sure "remaining_50_list" has exactly 50 movie titles
-print(f"{len(remaining_50_list)}\n\n")
+
+print(len(remaining_50_list))
 
 # TODO: Great! Let's join the two lists into one list called "top_100". Uncomment the line of code below and run your code to see how it's done!
 # Note: Print your new variable to see the combined list of movies
-top_100 = top_50_list + remaining_50_list
-print(f"{top_100}\n\n")
-print(f"{len(top_100)}\n\n")
+top_100 = [top_50_list+remaining_50_list]
+print(top_100)
+print({len(top_50_list) + len(remaining_50_list)})
+
 # TODO: Let's print the first movie in our "top_100" list. Let's use the index lookup method to do this.
-print(top_100[0])
+print(top_100[0,0])
+
 
 # TODO: Let's print the top 10 movies in "top_100" as a list. Let's use the slice syntax to accomplish this!
 top_10 = top_100[0:10]
