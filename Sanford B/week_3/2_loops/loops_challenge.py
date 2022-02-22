@@ -15,11 +15,12 @@ for weekdays in days:
 # 1.2: Now, instead of printing out the day, let's ask the user what their favorite thing
 # to do is on that day of the week. (Make sure to use an f-string so that the user knows which
 # day they're being asked about.)
-activities= []
+activities = []
 for weekdays in days:
+    activity = input(f'What is your favorite thing to do on {weekdays}?')
  #input(f'What is your favorite thing to do on {weekdays}?  ')
- user_activity =  input(f'What is your favorite thing to do on {weekdays}?  ')
- activities.append(user_activity)
+ 
+    activities.append(activity)
 
 # 1.3: We should keep track of the user's favorite things to do so that we can print them out all together.
 # ABOVE your for loop, create a new empty list to hold the user's favorite activities.
@@ -39,7 +40,7 @@ print(activities)
 # Each time through this new loop, use the index number to index into each of your lists for the data
 # you need to print out.
 
-for i in range(7):
+for i in range(len(days)):
     print(f'On {days[i]}, your favorite activity is to {activities[i]}.')
 
 
@@ -64,7 +65,14 @@ for i in range(7):
 # between 50 and 65, tell the user to put on a sweater. Finally, if the temperature is above 65,
 # tell the user to put on some sunscreen.
 
-
+for weekdays in days:
+    temp = int(input('What is the temperture today?'))
+    if temp < 50:
+        print('Put on a jacket')
+    elif temp < 65:
+        print('Put on a sweater')
+    else:
+        print('Wear sunscreen')
 
 
 
@@ -73,7 +81,9 @@ for i in range(7):
 # Write a program that asks the user how many times they would like to be wished happy birthday.
 # Then, print out happy birthday that number of times.
 
-
+num_wishes = int(input('How many times would you like to be wished Happy Birthday?'))
+for i in range(num_wishes):
+    print('Happy Birthday')
 
 
 # QUESTION 4: While loops
@@ -81,7 +91,10 @@ for i in range(7):
 # Write a program that asks the user what temperature it is outside. While the temperature is below 65,
 # tell the user to wear a sweater. Once the temperature is over 65, stop looping, and tell the user that
 # Spring has sprung!
-
-
+temp = int(input('What is the temperture today?'))
+while temp < 65: 
+    print('Put on a jacket')
+    temp = int(input('What is the temperture today?'))
+    print('Spring has sprung')
 # NOTE: remember, if you accidentally create an infinite while loop, it's ok! Go into the command line and
 # hit control + C to stop the program. No harm done to your computer (:
