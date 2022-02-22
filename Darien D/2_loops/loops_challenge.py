@@ -6,16 +6,20 @@ days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 # Let's start simple, and build up from there.
 # 1.1: Write a for loop that prints out each day in the `days` variable above.
 
+
 for i in days:
     print(i)
+
 
 
 # 1.2: Now, instead of printing out the day, let's ask the user what their favorite thing
 # to do is on that day of the week. (Make sure to use an f-string so that the user knows which
 # day they're being asked about.)
 
+
 # for day in days:
 #     print(input(f"What is your favorite thing to do on {day} ?\n"))
+
 
 
 # 1.3: We should keep track of the user's favorite things to do so that we can print them out all together.
@@ -23,12 +27,14 @@ for i in days:
 
 fav_act = []
 
+
 # 1.4: Now, back in your for loop, append each of the user's answers into your new list.
 # Print out the list after your loop to check if it got populated correctly.
 
 # for day in days:
 #     fav_act.append(input(f"What is your favorite thing to do on {day} ?\n"))
 # print(fav_act)
+
 
 # 1.5: After your first loop, let's create a new one. As an example, let's say the user's favorite thing to
 # do on mondays is plan their week. This time, we want the output to be something like this:
@@ -38,8 +44,10 @@ fav_act = []
 # Each time through this new loop, use the index number to index into each of your lists for the data
 # you need to print out.
 
+
 # for i in range(len(days)): #for loop to go through the index of list called days using range function
 #     print(f"On {days[i]}  your favorite activity is to {fav_act[i]} \n") # use f string function to display string and loop through days and fav_act lists
+
 
 
 # Take a look back at the code you just wrote. Look at how much it does!
@@ -49,6 +57,13 @@ fav_act = []
 
 # Maybe: Write a program that asks the user about their favorite thing to do each day of the week.
 # Afterward, print out for the user each of their favorite daily activities.
+
+
+# Would this larger task have felt doable without breaking it down into steps?
+# Is it clear what needs to be done?
+
+# Try to break down the steps required for this second loop challenge.
+
 
 # FAV_ACTIVI= []
 # for i in days:
@@ -63,6 +78,7 @@ fav_act = []
 # Create a list called fav_act for favorite activities 
 # Create a for loop that loops through the days of the week 
 # In the loop print an f function that takes input of the favorite things to do on the days in the week
+
 # QUESTION 2: For loops with list, again
 
 # Write a program that loops through the days in the week. Each day, ask the user what the temperature
@@ -82,13 +98,18 @@ fav_act = []
 #         print("Invalid entry")
 
 
+
 # QUESTION 3: For loops with the range function
 
 # Write a program that asks the user how many times they would like to be wished happy birthday.
 # Then, print out happy birthday that number of times.
+
+
+
 HBD = int(input(f"How many times do you want to be wished Happy Birthday ?\n"))
 for i in range(HBD):
     print(" Happy Birthday !")
+
 
 
 # QUESTION 4: While loops
@@ -96,6 +117,7 @@ for i in range(HBD):
 # Write a program that asks the user what temperature it is outside. While the temperature is below 65,
 # tell the user to wear a sweater. Once the temperature is over 65, stop looping, and tell the user that
 # Spring has sprung!
+
 temp = int(input("What is the Temperature today ? \n"))
 while temp < 65:
     print("Wear a sweater")
@@ -106,6 +128,7 @@ while temp < 65:
         break
 if temp > 65:
     print("Spring Has Sprung !")
+
 
 
 # NOTE: remember, if you accidentally create an infinite while loop, it's ok! Go into the command line and
