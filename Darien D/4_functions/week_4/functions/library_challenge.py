@@ -6,6 +6,7 @@ books = ['MY OWN WORDS', 'WHITE FRAGILITY', 'THE BODY KEEPS THE SCORE', 'SO YOU 
 # 1.0
 # What data type is the object 'books'? How do you know?
 
+print(type(books))
 
 # 1.1
 # Create a function 'available_books' to print the books list
