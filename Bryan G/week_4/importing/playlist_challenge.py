@@ -6,7 +6,7 @@
 # 1 Import all the functions in playlist_functions.py
 print('\nQuestion 1')
 from playlist_functions import *
-import numpy
+from numpy import *
 import os
 
 print('The proper text is: from playlist_functions import *')
@@ -25,7 +25,7 @@ display_playlist(my_playlist)
 # 'artist' (string)
 # 'title' (string)
 print('\nQuestion 3')
-print('This question does not print anyting to the terminal.')
+print('This question does not print anything to the terminal.')
 add_song(my_playlist, {'artist': 'Imagine Dragons', 'title': 'Radioactive'})
 '''
 example_song = {'artist': 'Lauryn Hill', 'title': 'Everything Is Everything'}
@@ -46,18 +46,26 @@ display_playlist(my_playlist)
 # See playlist_functions.py for details on how to define this function
 # THEN, call that function in this script to get the length of my_playlist
 print('\nQuestion 6')
+print(f'My playlist contains {get_playlist_length(my_playlist)} songs.')
 
 
 # 7 At the top of this script, import numpy using the usual alias
+print('\nQuestion 7')
+print('numpy has been imported')
 
 # 8: Using numpy, calculate the average monthly plays for a song
 # TODO: using the mean() function from numpy, calculate the average of monthly_plays
 # You don't have to write any functions for this question
-print('Question 8')
+print('\nQuestion 8')
 monthly_plays = [127030, 274920, 232453, 98278, 500301, 235462]
-
+print(f'The average monthly plays for the selected song is {int(mean(monthly_plays))}.')
 
 # BONUS In playlist_functions.py, define a new function called play_track()
 # See playlist_functions.py for details on how to define this function
 # Then play a few tracks, and run display_playlist() again to make sure it works
-print('BONUS')
+print('\nBONUS')
+play_track(my_playlist, 2)
+play_track(my_playlist, 0)
+play_track(my_playlist, 1)
+print()
+display_playlist(my_playlist)
