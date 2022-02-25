@@ -155,7 +155,7 @@ print('\nThis is a list of dictionaries. I know this because there is a group of
 # Parameters: Not needed for this function
 # Return: number of books (integer)
 def count_books():
-  return len(books)
+  return len(books_with_details)
 
 # 2.2
 # Check the number of books available in the books list using the count_books function
