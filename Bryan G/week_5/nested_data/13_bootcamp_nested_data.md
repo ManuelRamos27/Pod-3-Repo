@@ -530,7 +530,7 @@ nest_a_lot = [[[1,2,3], ['a', 'b', 'c']], [[TRUE, FALSE, TRUE], [{'name':'paul'}
 for i in nest_a_lot:
     for j in i:
         for k in j:
-            print(k)
+            print(k['name'])
 ```
 
 So, here we go throuth three levels of nested lists (plus one of the lists has dictionaries in it!) and print out the items:
