@@ -1,19 +1,22 @@
 # Challenge 1
-print("Challenge 1: All possible laptops\n")
+print("\nChallenge 1: All possible laptops\n")
 
 print("Question 1: You are given a list containing the laptop names. Print the names of each the laptops separately.")
 all_laptops = ["Apple MacBook Pro", "Asus Zenbook", "Dell XPS", "Lenovo IdeaPad", "Apple MacBook Air", "Sony Viao"]
 
 
 # TODO: Write code to print all laptop names
-print("All laptops names:")
+print("All laptop names:")
+
+for laptop in all_laptops:
+    print(laptop)
 
 
 # Challenge 2
 
-print("Challenge 2: Buy a laptop")
-print("Below is a dictionary of the top 2 laptops of 2020 as reviewed by Tech Crunch. \
-    Go through the dictionary and print out the following 3 pieces of information about the laptops: \
+print("\nChallenge 2: Buy a laptop")
+print(f"\nBelow is a dictionary of the top 2 laptops of 2020 as reviewed by Tech Crunch. \
+    \nGo through the dictionary and print out the following 3 pieces of information about the laptops: \
     \n1. The url for the Apple Macbook Pro \
     \n2. All possible prices of the 16-inch MacBook Pro. \
     \n3. All the color options for Dell XPS 13. \
@@ -69,26 +72,38 @@ laptops = [
                     "price": [1199, 1299, 1399, 1749, 1999, 2299]
                 }
             ],
-            "description": "The Dell XPS is an absolutely brilliant laptop. The 2020  version rocks an 11th-generation Intel Core i3, i5 or i7 processor and a bezel-less ‘Infinity Edge’ display. This Dell XPS continues to be the most popular Windows laptop in the world. What’s more, there’s a wide range of customization options, so you can really make the Dell XPS the best laptop for your needs. "
+            "description": "The Dell XPS is an absolutely brilliant laptop. The 2020 version rocks an 11th-generation Intel Core i3, i5 or i7 processor and a bezel-less ‘Infinity Edge’ display. This Dell XPS continues to be the most popular Windows laptop in the world. What’s more, there’s a wide range of customization options, so you can really make the Dell XPS the best laptop for your needs. "
         }
 ]
 
 # TODO: Write code to print out the MacBook Pro url 
-
+print(f"The MacBook Pro url is {laptops[0]['url']}")
 # TODO: Write code to print all possible prices of the 16-inch MacBook Pro.
-
+print(f"The 16-inch MacBook Pro prices are: {laptops[0]['types'][1]['price']}")
+    
 # TODO: Write code to print all the color options for Dell XPS 13.
+print(f"The Dell XPS color options are: {laptops[1]['types'][1]['colors']}")
 
 # TODO: Write code to print the description of Dell XPS laptop.
+print(f'Here\'s a description of the {laptops[1]["productName"]}:\n{laptops[1]["description"]}')
 
-
-print("Question 2: Out of Stock laptops")
+print("\nQuestion 2: Out of Stock laptops\n")
 print("Suppose that the 13-inch MacBook Pro in space gray color is sold out. Also, the same laptop with 1 TB storage is out of stock as well. Update the list of dictionaries such that these options are removed. Print the updated dictionary.")
 
 # TODO: Update the laptops dictionary.
-# TODO: Print the new dictionary.
+laptops[0]['types'][0]['colors'].remove('space gray')
+laptops[0]['types'][1]['storage'].remove('1 TB SSD')
 
-print("Question 3: listing all the prices")
+# TODO: Print the new dictionary.
+print(laptops)
+
+print("\nQuestion 3: listing all the prices\n")
 print("Time to look at the range of prices. Using a nested loops, print out all possible computer prices")
 
 # TODO: print out all possible prices for the laptops
+for i in laptops:
+    print(f"\nThe prices for the {i['productName']} are: ")
+    for j in i['types']:
+        for k in j['price']:
+            formatted_price = "${:,.2f}".format(k)
+            print(formatted_price)
