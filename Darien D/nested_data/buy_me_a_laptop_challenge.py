@@ -3,11 +3,10 @@ print("Challenge 1: All possible laptops\n")
 
 print("Question 1: You are given a list containing the laptop names. Print the names of each the laptops separately.")
 all_laptops = ["Apple MacBook Pro", "Asus Zenbook", "Dell XPS", "Lenovo IdeaPad", "Apple MacBook Air", "Sony Viao"]
-
-
 # TODO: Write code to print all laptop names
 print("All laptops names:")
-
+for i in range(len(all_laptops)):
+    print(f"{all_laptops[i]}")
 
 # Challenge 2
 
@@ -80,15 +79,27 @@ laptops = [
 # TODO: Write code to print all the color options for Dell XPS 13.
 
 # TODO: Write code to print the description of Dell XPS laptop.
-
+print("\n",laptops[0]["url"],"\n")
+print(laptops[0]["types"][1]["price"],"\n")
+for i in range(len(laptops[1]["types"])):
+    print(laptops[1]["types"][i]["colors"])
+print("\n",laptops[1]["description"],"\n")
 
 print("Question 2: Out of Stock laptops")
 print("Suppose that the 13-inch MacBook Pro in space gray color is sold out. Also, the same laptop with 1 TB storage is out of stock as well. Update the list of dictionaries such that these options are removed. Print the updated dictionary.")
 
 # TODO: Update the laptops dictionary.
 # TODO: Print the new dictionary.
+laptops[0]["types"][0]["colors"].pop(0)
+print(f"\n{laptops}\n")
+
 
 print("Question 3: listing all the prices")
 print("Time to look at the range of prices. Using a nested loops, print out all possible computer prices")
 
 # TODO: print out all possible prices for the laptops
+#Loop through laptops in laptops dictionary list
+for j in range(len(laptops)):
+    #Loop into the amount of types for each laptop
+    for i in (range(len(laptops[j]["types"]))):
+     print(laptops[j]["types"][i]["price"])
