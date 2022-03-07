@@ -5,12 +5,18 @@ books = ['MY OWN WORDS', 'WHITE FRAGILITY', 'THE BODY KEEPS THE SCORE', 'SO YOU 
 
 # 1.0
 # What data type is the object 'books'? How do you know?
+print(type(books))
 
+list 
 
 # 1.1
 # Create a function 'available_books' to print the books list
 # Parameters: Not needed for this function
 # Return: Not needed for this function
+
+
+def available_books():
+    print(books)
 
 # 1.2
 # Run the 'available_books' function
@@ -20,8 +26,14 @@ books = ['MY OWN WORDS', 'WHITE FRAGILITY', 'THE BODY KEEPS THE SCORE', 'SO YOU 
 # Parameters: book (string)
 # Return: Not needed for this function
 
+def check_out(book):
+    books.remove()
+    
 # 1.4
 # Check out 'SAPIENS' using the check_out function
+
+check_out("SAPIENS")
+
 
 # Bonus: Run available_books function again to see if the book was checked out
 
@@ -30,8 +42,15 @@ books = ['MY OWN WORDS', 'WHITE FRAGILITY', 'THE BODY KEEPS THE SCORE', 'SO YOU 
 # Parameters: book (string)
 # Return: Not needed for this function
 
+def check_in(book):
+    books.append()
+
+
+
 # 1.6
 # Check in 'SAPIENS' using the check_in function
+
+check_in(SAPIENS)
 
 # Bonus: Run available_books function to see if the book was checked in
 
@@ -39,6 +58,15 @@ books = ['MY OWN WORDS', 'WHITE FRAGILITY', 'THE BODY KEEPS THE SCORE', 'SO YOU 
 # Create a function 'search_by_name' that prints 'Available' if exists in books list, 'Not Available' if it doesn't.
 # Parameters: book (string)
 # Return: Not needed for this function
+
+def search_by_name():
+    for book in books:
+        if book == "Available":
+            print("Available")
+        else:
+            print("Not Available")
+
+    
 
 # 1.8
 # Search for the book 'JUST MERCY'
@@ -132,21 +160,38 @@ books_with_details = [
 # 2.0
 # Describe the structure of the data in books_with_details. What types of data are nested within others? How do you know?
 
+#The data structure is a list with dictionaries.
+#The key:values are strings.
+#I know because I do research on the topic.
+
 # 2.1
 # Create a function 'count_books' that returns the number of books in the books_with_details list
 # Parameters: Not needed for this function
 # Return: number of books (integer)
 
+def count_books():
+    for book in len(books):
+        count_books_list = len(count_books["title"].append())
+
 # 2.2
 # Check the number of books available in the books list using the count_books function
 
-# 2.3
+count_books()
+
+# 2
 # Create a function 'search_by_author' that returns the titles of books by an author
 # Parameters - author (string)
 # Return - author's books (list of strings)
 # Hint - You will need a for loop, if statement, .append() for this solution!
 
+def search_by_author(author):
+    for book in len(books):
+        new_list = [book][1]["authors"].append()
+    return new_list
+
 
 # 2.4
 # Search for book titles by the author 'Timothy Snyder' using the search_by_author function
 
+x = search_by_author("Timothy Snyder")
+print(x)
