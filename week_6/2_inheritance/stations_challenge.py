@@ -10,6 +10,10 @@ Since subways and buses have different information, the methods and attributes w
 '''
 
 
+from asyncio import run_coroutine_threadsafe
+from turtle import st
+
+
 print('Question 1: Making the SubwayStation Class')
 '''
 Using the Station class below as the parent, make a child class called SubwayStation
@@ -27,6 +31,13 @@ class Station:
     def show_info(self):
         print(f'{self.station_name} station is located at {self.location}')
 
+class SubWayStation(Station):    #child class
+    def __init__(self, station_name, location, lines): #attributes of SubWayStattion
+        super().__init__(station_name, location) #attributes inherited from parent class
+        self.lines = lines #add'n attributes of SubWayStation class
+    
+    def show_info(self):
+        print(f'{self.station_name} station is located at {self.location} on the {self.line}')
 
 
 print('Question 2: Make an example subway station')
@@ -38,6 +49,10 @@ station_name: '14th street'
 location: '14th street and 7th avenue'
 lines: ['1', '2', '3', 'L']
 '''
+
+station_14th_St = SubWayStation ('14th street', '14th street and 7th avenue', '['1', '2', '3', 'L')
+
+station_14th_St.show_info()
 
 
 print('Question 3: Making the BusStation Class')
@@ -52,9 +67,27 @@ BusStation should:
 -have additional methods called open_station() and close_station() to open and close the station
 -override the show_info() method from Station to display the bus routes and if the station is open, in addition to the station name and location
 '''
+class BusStation(Station):
+    def __init__(self, station_name, location, routes):
+        super().__init__(station_name, location)
+        self.routes = routes
+        self.open = True
+
+    def open_station(self):
+        self.open = True
+
+    def closed_station(self):
+        self.open = False
+    
+    def show_info:
+        if open = True:
+            print(f'The station {self.station} located at {self.location} on the routes {self.routes} is open')
+
+        else:
+            print(f'The station is closed')
 
 
-
+    BusStation.show_info(self.station)
 
 print('Question 4: Make an example bus station')
 '''
@@ -67,6 +100,10 @@ station_name: 'NYC Megabus Stop'
 location: '34th street and 12th avenue'
 lines: ['Boston', 'DC', 'Philly']
 '''
+
+NYCMegabusStop = BusStation("NYC Megabus Stop", "34th street and 12th avenue", ['Boston', 'DC', 'Philly'])
+
+NYCMegabusStop.show_info.open()
 
 print('Question 5: Importing your classes')
 
