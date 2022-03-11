@@ -17,7 +17,8 @@ class Booklist():
 
 	def remove_title(self, title):
 		"""Remove a book from the book list"""
-		# self.books.remove(title)
+		[title for title in self.books :
+			if self.books.remove(self.books.book(title))
 
 		# expression for item in list if conditional
 		# x+1 if x >= 45 else x+5 for x in l
