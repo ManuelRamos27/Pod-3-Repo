@@ -13,7 +13,7 @@ Since subways and buses have different information, the methods and attributes w
 from asyncio import run_coroutine_threadsafe
 
 
-print('Question 1: Making the SubwayStation Class')
+print('Question 1: Making the SubwayStation Class', '- COMPLETED')
 '''
 Using the Station class below as the parent, make a child class called SubwayStation
 
@@ -36,10 +36,11 @@ class SubwayStation(Station):
         self.lines = lines
 
     def show_info(self):
-        print(f'Lines {self.lines} stop at {self.station_name} station, which is located at {self.location}.')    
+        lines_text = ', '.join(self.lines[:-1])
+        final_line = self.lines.pop()
+        print(f'Lines {lines_text}, and {final_line} stop at {self.station_name} station, which is located at {self.location}.')    
     
-
-print('Question 2: Make an example subway station')
+print('Question 2: Make an example subway station', '- COMPLETED')
 '''
 Using your SubwayStation class, instantiate a subway station with the info below. 
 Then run the show_info() method to make sure you get the station_name, location, and lines printed out
@@ -52,7 +53,7 @@ fourteenth_st = SubwayStation('14th Street', '14th St & 7th Ave', ['1', '2', '3'
 
 fourteenth_st.show_info()
 
-print('Question 3: Making the BusStation Class')
+print('Question 3: Making the BusStation Class', '- COMPLETED')
 
 '''
 Using the Station class below as the parent, make a child class called BusStation
@@ -77,9 +78,14 @@ class BusStation(Station):
         self.open = False
 
     def show_info(self):
-        print(f'Station {self.station_name} located at {self.location} and serving {f"{for route in self.routes}, "} is {"open" if self.open == True else "closed"}.')
+        routes_text = ', '.join(self.routes[:-1])
+        final_route = self.routes.pop()
 
-print('Question 4: Make an example bus station')
+        print(f'The {self.station_name} is located at {self.location}, and serves {routes_text}, and {final_route}. The station is currently {"open" if self.open == True else "closed"}.')
+
+
+        
+print('Question 4: Make an example bus station', '- COMPLETED')
 '''
 Using your BusStation class, instantiate a bus station with the info below. 
 Then, run the show_info() method to make sure you get the station_name, location, routes, and whether the station is open printed out
@@ -95,7 +101,7 @@ nyc_stop = BusStation('NYC Megabus Stop', '34th St & 12th Ave', ['Boston', 'DC',
 
 nyc_stop.show_info()
 
-print('Question 5: Importing your classes')
+print('Question 5: Importing your classes', '- COMPLETED')
 
 '''
 Now, it's time to design a few more stations of your own in another script! 
