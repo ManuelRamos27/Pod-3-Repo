@@ -47,6 +47,7 @@ My Grandmother's Hands - Resmaa Menakem
 Finally, print the books attribute of my_library to make sure your books have been added!
 '''
 print('\nPart 2\n')
+
 my_library.add("Just Mercy", "Bryan Stevenson")
 my_library.add("The New Jim Crow", "Michelle Alexander")
 my_library.add("The Truths We Hold", "Kamala Harris")
@@ -82,7 +83,9 @@ Then, print out the books attribute to make sure that book is gone
 '''
 
 print('\nPart 4\n')
+print(my_library.count_books())
 my_library.remove_title('Just Mercy')
+print(my_library.count_books())
 
 print([(f'{book.title} by {book.author}') for book in my_library.books])
 

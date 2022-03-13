@@ -1,3 +1,4 @@
+from operator import indexOf
 from book_class import Book
 
 
@@ -12,16 +13,13 @@ class Booklist():
 		self.books.append(book)
 
 	def count_books(self):
-		"""Return the number of books currently in the booklist"""
+		"""Return the number of books currently in the book list"""
 		return len(self.books)
 
+	
 	def remove_title(self, title):
 		"""Remove a book from the book list"""
-		[title for title in self.books :
-			if self.books.remove(self.books.book(title))
-
-		# expression for item in list if conditional
-		# x+1 if x >= 45 else x+5 for x in l
+		[self.books.remove(book) for book in self.books if book.title == title]
 
 	def display_titles(self):
 		"""Print out all titles currently in the book list"""
