@@ -13,7 +13,7 @@ Since subways and buses have different information, the methods and attributes w
 from asyncio import run_coroutine_threadsafe
 
 
-print('Question 1: Making the SubwayStation Class', '- COMPLETED')
+print('Question 1: Making the SubwayStation Class', 'COMPLETED')
 '''
 Using the Station class below as the parent, make a child class called SubwayStation
 
@@ -36,8 +36,8 @@ class SubwayStation(Station):
         self.lines = lines
 
     def show_info(self):
-        lines_text = ', '.join(self.lines[:-1])
-        final_line = self.lines.pop()
+        lines_text = ', '.join(self.lines[::])
+        final_line = self.lines[-1]
         print(f'Lines {lines_text}, and {final_line} stop at {self.station_name} station, which is located at {self.location}.')    
     
 print('Question 2: Make an example subway station', '- COMPLETED')
@@ -79,11 +79,9 @@ class BusStation(Station):
 
     def show_info(self):
         routes_text = ', '.join(self.routes[:-1])
-        final_route = self.routes.pop()
+        final_route = self.routes[-1]
 
         print(f'The {self.station_name} is located at {self.location}, and serves {routes_text}, and {final_route}. The station is currently {"open" if self.open == True else "closed"}.')
-
-
         
 print('Question 4: Make an example bus station', '- COMPLETED')
 '''
@@ -99,6 +97,8 @@ lines: ['Boston', 'DC', 'Philly']
 
 nyc_stop = BusStation('NYC Megabus Stop', '34th St & 12th Ave', ['Boston', 'DC', 'Philly'])
 
+nyc_stop.show_info()
+nyc_stop.close_station()
 nyc_stop.show_info()
 
 print('Question 5: Importing your classes', '- COMPLETED')
