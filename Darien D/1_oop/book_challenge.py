@@ -9,6 +9,7 @@ This class and the methods are already imported in this script -- test them here
 '''
 
 # import the Booklist class and corresponding methods
+from turtle import title
 from book_list_class import Booklist
 
 
@@ -48,6 +49,11 @@ My Grandmother's Hands - Resmaa Menakem
 Finally, print the books attribute of my_library to make sure your books have been added!
 '''
 print('\nPart 2\n')
+my_library.add("Just Mercy","Bryan Stevenson")
+my_library.add("The New Jim Crow","Michelle Alexander")
+my_library.add("The Truths We Hold","Kamala Harris")
+my_library.add("My Grandmother's Hands","Resmaa Menakem")
+print([book.title for book in my_library.books])
 
 
 
@@ -62,7 +68,7 @@ In this script:
 Once you have finished the method, count the books in my_library and print out the result
 '''
 print('\nPart 3\n')
-
+print(my_library.count_books())
 
 
 '''
@@ -79,6 +85,8 @@ Then, print out the books attribute to make sure that book is gone
 '''
 
 print('\nPart 4\n')
+my_library.remove_title("Just Mercy")
+print([book.title for book in my_library.books])
 
 
 '''
@@ -93,6 +101,13 @@ Then, print out the books attribute of nyt_bestsellers
 '''
 
 print('\nPart 5\n')
+
+nyt_bestsellers=Booklist()
+nyt_bestsellers.add("IT ENDS WITH US","Colleen Hoover")
+nyt_bestsellers.add("THE PARIS APARTMENT","Lucy Foley")
+for book in nyt_bestsellers.books:
+    print(book.title)
+
 
 
 
@@ -110,3 +125,6 @@ Once you have completed this method, test it out on both my_library and nyt_best
 '''
 
 print('\nBONUS Part 6\n')
+my_library.display_titles()
+nyt_bestsellers.is_empty()
+my_library.is_empty()
