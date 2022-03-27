@@ -1,11 +1,17 @@
 .center {
     text-align: center;
 }
+.center_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
 .font_verdana {
     font-family: Verdana;
 }
-.green {
-    color: green;
+.fuschia {
+    color: fuchsia;
 }
 #fact1 {
     color: pink;
