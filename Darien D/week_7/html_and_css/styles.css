@@ -7,13 +7,13 @@
 .green {
     color: rgb(1, 145, 1);
 }
-#fact1 {
+.fact1 {
     color: pink;
 }
-#fact2 {
+.fact2 {
     color: purple;
 }
-#fact3 {
+.fact3 {
     color: green;
     font-style: italic;
 }
